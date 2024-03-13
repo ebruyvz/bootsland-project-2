@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+  }
+  
+  @keyframes my-animation {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-10%);
+      }
+    }
+  
+  @keyframes my-animation-medium {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes my-animation-xlarge {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-19%);
+    }
+  }
+
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .hover-effect {
+    transition: transform 0.3s;
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-32px);
+  }
+  
+  .hover-right {
+    transition: transform 0.5s;
+  }
+
+  .hover-right:hover {
+    transform: translateX(10px);
+  }
+
+  /* Navbar */
+
+  @keyframes slideDownTwoKeyframe {
+    from{
+      transform: translateY(-56px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slideDownTwo {
+      animation: slideDownTwoKeyframe 300ms ease-in;
+  }
+
+  .scrollToTopBtn {
+    background-color: #2b6cb0;
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease
+  }
+
+  .scrollToTopBtn:hover {
+    background-color: white;
+  }
+      
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0)
+  }
